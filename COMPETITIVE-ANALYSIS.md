@@ -1,6 +1,6 @@
 # Competitive & Improvement Analysis — `place-name-pronunciation`
 
-Analysis of the Elyos good-deed project: an open, consent-first corpus of how toponyms are
+Analysis of the Hee-Lee Oss good-deed project: an open, consent-first corpus of how toponyms are
 actually pronounced (audio + IPA + respelling + sourced origin notes), grounded against
 real-world competitors with cited sources. Plan reviewed: PLAN.md v0.1.0 (draft), with TASKS.md
 M0–M3 skimmed.

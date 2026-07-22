@@ -166,12 +166,12 @@ consent, provenance, and community respect is a liability, not a win.
 
 ## Solution approach & architecture
 
-This is a **content + data pipeline** project built with Elyos engineering conventions
+This is a **content + data pipeline** project built with Hee-Lee Oss engineering conventions
 (TypeScript, ESM, pnpm workspaces). The deliverables are data, schema, and tooling.
 
 ### Components
 
-1. **Schema package** — JSON Schema (draft-07, consistent with the Elyos task schema) for the core
+1. **Schema package** — JSON Schema (draft-07, consistent with the Hee-Lee Oss task schema) for the core
    records (below), plus TypeScript types generated from it.
 2. **Ingestion & validation pipeline** — CLI tooling that takes a submission (audio + metadata +
    consent), validates it against the schema and the **gates**, normalises audio, computes
@@ -192,7 +192,7 @@ This is a **content + data pipeline** project built with Elyos engineering conve
 ### Tech stack (locked)
 
 - **Language/runtime:** TypeScript + ESM, pnpm workspaces (per CLAUDE.md).
-- **Validation:** Ajv (already an Elyos dependency) against JSON Schema.
+- **Validation:** Ajv (already a Hee-Lee Oss dependency) against JSON Schema.
 - **Audio:** `ffmpeg` (transcode/normalise), `ffprobe` (inspect), SHA-256 checksums.
 - **Identifiers:** Wikidata QID + GeoNames ID + a stable host-independent entry ID
   (w3id.org/PURL namespace, decoupled from the unsecured host).
@@ -385,7 +385,7 @@ documented downstream reuse (e.g. an accessibility/TTS or classroom integration)
 ## Work breakdown
 
 The itemised, schema-mapped backlog lives in [`TASKS.md`](./TASKS.md): ~16 tasks across M0–M3 plus
-a sized backlog, each as an Elyos Task JSON with acceptance criteria, a Definition of Done per
+a sized backlog, each as a Hee-Lee Oss Task JSON with acceptance criteria, a Definition of Done per
 milestone, and a schema-valid example. M0 establishes the schema, license allow-list, consent
 spine, ID namespace, and CI gates; M1 proves the pipeline on a consented batch; M2 adds variation,
 origins, and the explorer; M3 scales and secures steward adoption.
@@ -416,9 +416,9 @@ origins, and the explorer; M3 scales and secures steward adoption.
 - **Wikimedia Commons / Lingua Libre** — existing open pronunciation audio (per-file license).
 - **OpenStreetMap** (ODbL) — optional place extent; share-alike handled.
 - **`ffmpeg`/`ffprobe`** — audio transcode, normalisation, inspection.
-- **Ajv** — schema validation (shared Elyos dependency).
+- **Ajv** — schema validation (shared Hee-Lee Oss dependency).
 - **Open IPA fonts (OFL)** — phonetic rendering in any UI.
-- **Elyos pieces:** task schema (`packages/schema`), CLI workspace conventions, CI/governance
+- **Hee-Lee Oss pieces:** task schema (`packages/schema`), CLI workspace conventions, CI/governance
   workflows, registry.
 - **Hosting** for audio + explorer — **TO BE SECURED** (steward or Wikimedia Commons).
 
@@ -489,16 +489,16 @@ origins, and the explorer; M3 scales and secures steward adoption.
 
 ## References
 
-- `C:\code\elyos\CLAUDE.md` — Elyos work rules, lanes, quality bar, refusal guardrails.
-- `C:\code\elyos\docs\good-deed-definition.md` — the 5 criteria + risk tiers.
-- `C:\code\elyos\packages\schema\src\schemas.ts` — the Task JSON schema TASKS.md maps to.
-- `C:\code\elyos\planning\ROADMAP.md` — portfolio context (Track 4; `place-name-pronunciation`).
+- `C:\code\hee-lee-oss\CLAUDE.md` — Hee-Lee Oss work rules, lanes, quality bar, refusal guardrails.
+- `C:\code\hee-lee-oss\docs\good-deed-definition.md` — the 5 criteria + risk tiers.
+- `C:\code\hee-lee-oss\packages\schema\src\schemas.ts` — the Task JSON schema TASKS.md maps to.
+- `C:\code\hee-lee-oss\planning\ROADMAP.md` — portfolio context (Track 4; `place-name-pronunciation`).
 - CARE Principles for Indigenous Data Governance (Global Indigenous Data Alliance).
 - FAIR data principles.
 - Wikidata (CC0), GeoNames (CC-BY), Wikimedia Commons / Lingua Libre (per-file CC), OpenStreetMap
   (ODbL) — source license references.
 - IPA (International Phonetic Association); BCP-47 language tags; EBU R128 loudness.
-- Sibling Elyos projects: `open-pronunciation-audio`, `open-accessible-fonts`,
+- Sibling Hee-Lee Oss projects: `open-pronunciation-audio`, `open-accessible-fonts`,
   `historical-markers-index`.
 
 ---
